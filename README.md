@@ -30,13 +30,13 @@ To help hospital administrators:
 ## 🏗️ Architecture
 
 Google Colab (Data Cleaning)
-↓
+
 Azure Data Lake Gen2 (Raw Layer)
-↓
+
 Azure Databricks (PySpark Processing)
-↓
+
 Delta Lake (Curated & Gold Layers)
-↓
+
 Power BI Dashboards
 
 ## 🛠️ Tools & Technologies
