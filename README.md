@@ -1,21 +1,21 @@
 # Hospital Resource Utilization Optimizer  
-### Patient-flow–driven Healthcare Analytics (Azure + PySpark + Power BI)
+### Patient-flow–driven Healthcare Analytics (Azure • PySpark • SQL Server • Power BI • Python/Colab)
 
 ## 📌 Project Overview
 
-Hospitals operate with limited resources such as beds, staff, and facilities.  
-Efficient utilization of these resources depends heavily on **patient flow patterns**.
+The Hospital Resource Utilization Optimizer is an end-to-end healthcare analytics project focused on analyzing hospital admission data to understand patient flow and its impact on hospital resource utilization. The project identifies admission trends, department workload, length-of-stay patterns, and long-stay patient behavior to support informed operational planning.
 
-This project implements an **end-to-end cloud data engineering and analytics pipeline** to analyze hospital admission data and derive insights that support **resource utilization planning**, using historical patient data as demand signals.
+The workflow combines cloud-based data engineering on Azure, SQL-based analytics, and business-focused visualization using Power BI. Patient flow metrics are used as a proxy to evaluate hospital resource demand such as bed utilization and staff workload.
 
 ## 🎯 Business Objective
 
-To help hospital administrators:
-- Understand admission trends over time
-- Identify emergency vs OPD demand patterns
-- Analyze length of stay as a proxy for bed utilization
-- Observe outcome distributions (discharge, mortality)
-- Support data-driven operational planning
+To help hospital administrators and operations teams:
+Understand admission trends across time
+Compare Emergency vs OPD demand patterns
+Analyze Length of Stay as a proxy for bed utilization
+Identify long-stay patients impacting capacity
+Support data-driven hospital resource planning
+Note: Patient flow and length of stay are used as indirect indicators of hospital resource utilization due to the absence of direct operational metrics.
 
 > 📌 Note: Patient flow is used as a **proxy** to estimate hospital resource utilization (beds, staff workload).
 
@@ -29,69 +29,65 @@ To help hospital administrators:
 
 ## 🏗️ Architecture
 
-Google Colab (Data Cleaning)
-
-Azure Data Lake Gen2 (Raw Layer)
-
-Azure Databricks (PySpark Processing)
-
-Delta Lake (Curated & Gold Layers)
-
-Power BI Dashboards
+Google Colab – Initial data cleaning and feature engineering using Python
+Azure Data Lake Gen2 – Storage of cleaned admission data (raw layer)
+Azure Databricks (PySpark) – Data exploration and validation
+Delta Lake – Curated and analytics-ready datasets
+SQL Server (SSMS) – SQL-based KPI analysis and aggregation
+Power BI – Interactive dashboards and business insights
 
 ## 🛠️ Tools & Technologies
 
 **Data Engineering**
-- Azure Data Lake Gen2
-- Azure Databricks
-- PySpark
-- Delta Lake
+Azure Data Lake Gen2
+Azure Databricks
+PySpark
+Delta Lake
 
 **Analytics & Visualization**
-- Power BI Desktop
-- DAX Measures
+SQL Server (SSMS)
+SQL
+Power BI Desktop
+DAX Measures
 
 **Development**
-- Google Colab (initial data preparation)
-- GitHub (documentation & version control)
+Power BI Desktop
+DAX Measures
 
 ## 📊 Dashboards Created (Power BI)
 
-- Executive Summary (KPIs & slicers)
-- Monthly Admission Trends
-- Weekly Patterns
-- Gender-based Analysis
-- Admission Outcome Analysis
-- Emergency vs OPD Comparison
-- Rural vs Urban Distribution
-
-> Dashboards are fully interactive using slicers for year, month, gender, and admission type.
-
+Executive Summary (Key KPIs & slicers)
+Monthly Admission Trends
+Weekly Admission Patterns
+Emergency vs OPD Comparison
+Gender-based Admission Analysis
+Admission Outcome Distribution
+Rural vs Urban Admission Analysis
+Dashboards are fully interactive using slicers for year, month, gender, and admission type.
 
 ## 📈 Key Metrics
 
-- Total Admissions
-- Average Length of Stay (proxy for bed utilization)
-- Emergency Admission Percentage
-- Mortality Rate
+Total hospital admissions
+Average Length of Stay (ALOS), calculated with and without outliers
+Department-wise admission distribution (Emergency vs OPD)
+Monthly admission trends and peak demand periods
+Long-stay patient analysis (7–30 days) impacting bed utilization
 
 ## 🔍 Project Scope Clarification
 
-This project focuses on **patient-flow–driven resource utilization**:
-- Direct resource metrics (beds, doctors, equipment) are not explicitly available
-- Length of stay and admission volume act as **indirect indicators**
-- The architecture is scalable to integrate real-time or operational hospital data
+This project focuses on patient-flow–driven resource utilization analytics:
+Direct resource metrics (beds, staff, equipment) are not explicitly available
+Admission volume and length of stay act as proxy indicators
+The architecture is scalable and can integrate operational hospital systems in the future
 
 ## 🚀 Future Enhancements
-
-- Integrate real-time admission feeds
-- Add predictive forecasting for bed demand
-- Include staffing and equipment utilization data
-- Apply ML models for capacity optimization
+Integrate real-time admission data feeds
+Implement forecasting models for bed demand
+Include staffing and equipment utilization datasets
+Apply machine learning for capacity optimization
 
 ## Summary
-
-> “This project demonstrates how cloud-based data engineering and analytics can be used to analyze hospital patient flow and support resource utilization planning. Using Azure, PySpark, Delta Lake, and Power BI, I built an end-to-end pipeline and interactive dashboards that translate patient demand into operational insights.”
+This project demonstrates how cloud-based data engineering, SQL analytics, and visualization can be combined to analyze hospital patient flow and support resource utilization planning. Using Azure, PySpark, SQL Server, and Power BI, I built an end-to-end analytics pipeline that converts raw admission data into actionable operational insights.
 
 
 ## 📎 Author
